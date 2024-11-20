@@ -30,18 +30,10 @@ const App = () => {
     }
   };
 
-  const calculateTotal = () => {
-    return order.reduce((total, item) => total + item.price * item.quantity, 0);
-  };
-
   return (
     <>
       <ItemList addToOrder={addToOrder} />
-      <OrderList
-      order={order}
-      updateQuantity={updateQuantity}
-      total={calculateTotal}
-      />
+      <OrderList order={order} updateQuantity={updateQuantity} />
     </>
   );
 };
