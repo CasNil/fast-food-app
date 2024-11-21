@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ItemList from "./Components/ItemList";
 import OrderList from "./Components/OrderList";
+import ThemeToggle from "./Components/ThemeToggle";
 
 const App = () => {
   const [order, setOrder] = useState([]);
@@ -31,10 +32,11 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="container">
+      <ThemeToggle />
       <ItemList addToOrder={addToOrder} />
       <OrderList order={order} updateQuantity={updateQuantity} />
-    </>
+    </div>
   );
 };
 
